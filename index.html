@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="./resources/images/styles.css" />
+</head>
+<body>
+   <div class="container"> 
+        <header class=""flex">
+            <div class="name">Julian Kempf</div>
+            <nav>
+                <ul class="flex">
+                     <li><a href="#home">Home</a></li>
+                     <li><a href="#about">Über Mich</a></li>
+                     <li><a href="#projects">Projekte</a></li>
+                     <li><a href="#skills">Skills</a></li>
+                     <li><a href="#contact">Kontakt</a></li>
+                 </ul>
+               
+            </nav>
+         </header>
+
+         <div class="main flex">
+            <div class="main-one">
+              <h1>Hi! Ich bin</h1>
+              <span class="auto">Julian Kempf</span>
+              <p>
+                Ich bin Bachelor of Science Betriebswirtschaftslehre mit dem Schwerpunkt Rechnungslegung und Prüfung.
+                Während meinem Studium habe ich viele Interessen verfolgt und das Programmieren für mich entdeckt.
+                Zunächst habe ich mich die Web Entwicklung gemeistert und mich dann mit dem Backend auseinandergesetzt. 
+              </p>
+              <button>Stell mich ein!</button>
+            </div>
+            <div class="main-two">
+              <img src="./resources/images/Design ohne Titel(34).png" alt="Foto von Julian Kempf" />
+            </div>
+          </div>
+
+        <section class="about" id="about">
+            <div class="about-one">
+            <h1>Über Mich</h1><br>
+            <p>
+                Durch meine Selbständigkeit neben dem Studium habe ich gelernt, meine Zeit richtig 
+                einzuteilen und Verantwortung zu übernehmen, auch in stressigen Situationen, wie zum 
+                Beispiel während den Klausurenphasen. Aufgrund der Zusammenarbeit mit vielen 
+                verschiedenen Unternehmen konnte ich mir bereits Grundkenntnisse aus diversen Bereichen
+                aneignen. Ich bringe Kreativität mit und kann unterschiedlichste Perspektiven in meine Arbeit
+                einfließen lassen!
+
+                Fun Fact: Ich habe vor <span id="time-container">NaN</span> Sekunden angefangen zu programmieren.
+            </p>
+        </div>
+        </section>
+
+        <section class="projects" id="projects">
+            <h1>Meine coolen<br><span>Projekte:</span></h1>
+            <p>Hier eine Zusammenstellung meiner Projekte. Dabei handelt es sich um Projekte,
+                die ich während meines Programmierkurses machen durfte und um private Projekte, die ich in meiner Freizeit umgesetzt habe.</p>
+            <button class="button">Download CV</button>
+            <div class="project1">
+                <img src="./resources/images/chrome.png">
+                <h3>Chrome Extension Pomodoro Timer</h3>
+                <p>Chrome Extension, die genutzt werden kann, um nach dem Pomodoro-Prinzip zu lernen!</p>
+                <button>Vorschau</button>
+            </div>
+            <div class="project2">
+                <img src="">
+                <h3>AI Text Summarizer</h3>
+                <p>Zum ausprobieren der neuen GDP-3 Technologie</p>
+                <button>Vorschau</button>
+            </div>
+            <div class="project3">
+                <img src="./resources/images/atomic.png">
+                <h3>Electron App</h3>
+                <p>Entwicklung einer Desktop Anwendung mit Electron.js</p>
+                <button>Vorschau</button>
+            </div>
+            <div class="project2">
+                <img src="">
+                <h3>Mixed Messages</h3>
+                <p>Portfolio Projekt aus dem CodeCademy-Kurs</p>
+                <button>Vorschau</button>
+            </div>
+        </section>
+
+        <section class="skills" id="skills">
+            <h1>Skills</h1>
+            <div class="skills-container" id="skills-container">
+                <img src="./resources/images/html-5.png">
+                <img src="./resources/images/css-3.png">
+                <img src="./resources/images/js.png">
+                <img src="./resources/images/git.png">
+                <img src="./resources/images/github.png">
+                <img src="./resources/images/chrome.png">
+                <img src="./resources/images/atomic.png">
+                <img src="./resources/images/nodejs.png">
+                <img src="./resources/images/react.png">
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <h1>Hier kannst du mich finden:</h1><br>
+            <h4>Email:</h4>
+            <p>julian.kempf@web.de</p><br>
+            <h4>LinkedIn:</h4>
+            <p><a href="https://www.linkedin.com/in/julian-kempf-3a95011a9/">Julian Kempf</a></p><br>
+            <h4>GitHub:</h4>
+            <p><a href="https://github.com/jempf">jempf</a></p> <br>           
+          </section>
+          <footer class="flex" id="footer">
+            <div class="copy">@copywrite Julian Kempf</div>
+          </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+      var typed = new Typed(".auto", {
+        strings: ["Julian Kempf", "Web Developer", "Betriebswirtschaftler"],
+        typeSpeed: 60,
+        backSpeed: 70,
+        loop: true,
+      });
+    </script>
+    <script>
+        const timeContainer = document.getElementById("time-container");
+        const BIRTH_DAY = "05-14-2022";
+        const BIRTH_DAY_DATE = new Date(BIRTH_DAY);
+        const intlNumberFormatter = new Intl.NumberFormat("en-US");
+    
+        setInterval(() => {
+          const now = new Date();
+          const difference = Math.floor(
+            (now.getTime() - BIRTH_DAY_DATE.getTime()) / 1000
+          );
+    
+          timeContainer.innerText = intlNumberFormatter.format(difference);
+        }, 1000);
+      </script>
+
+</body>
+</html>
